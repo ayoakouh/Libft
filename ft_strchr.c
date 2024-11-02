@@ -6,13 +6,13 @@
 /*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 11:17:08 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/23 13:27:30 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/10/29 09:54:24 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<string.h>
+
 #include "libft.h"
 
-char	*ft_strchr(const char	*s, int	c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 

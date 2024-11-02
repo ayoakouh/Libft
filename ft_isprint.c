@@ -6,16 +6,16 @@
 /*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 14:51:59 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/22 14:52:18 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:03:49 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isprint(int	c)
+int	ft_isprint(int c)
 {
-	if (c >= 33 && c <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
-		return(0);
+		return (0);
 }

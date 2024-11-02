@@ -1,45 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 18:49:46 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/25 18:59:01 by ayoakouh         ###   ########.fr       */
+/*   Created: 2024/10/27 13:17:51 by ayoakouh          #+#    #+#             */
+/*   Updated: 2024/10/29 10:38:58 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strtrim(char const	*s1, char const	*set)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	start;
-	size_t	end;
-	char *ptr;
+	char			*ptr;
+	unsigned int	i;
+	unsigned int	len;
 
-	start = 0;
-	end = ft_strlen(s1);
-	while (s1[start] == set[start])
-		start++;
-	while (s1[end] == set[end])
-		end--;
-	ptr = (char *) malloc (end - start + 1);
+	len = ft_strlen(s);
+	i = 0;
+	if (s == NULL || f == NULL)
+		return (NULL);
+	ptr = (char *)malloc(sizeof(char) * (len + 1));
 	if (ptr == NULL)
 		return (NULL);
-	while (start <= end)
+	while (s[i])
 	{
-		ptr[start] == s1[start];
-		start++;
+		ptr[i] = f(i, s[i]);
+		i++;
 	}
-	ptr[end + 1] = '\0';
+	ptr[len] = '\0';
 	return (ptr);
-}
-#include <stdio.h>
-int main()
-{
-	char str[] = "   ayoub ali     ";
-	char set[] = " ";
-	printf("%s", ft_strtrim(str,set));
 }

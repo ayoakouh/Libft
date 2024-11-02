@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 14:51:29 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/29 09:33:05 by ayoakouh         ###   ########.fr       */
+/*   Created: 2024/10/28 12:15:00 by ayoakouh          #+#    #+#             */
+/*   Updated: 2024/10/29 10:45:47 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <fcntl.h>
 #include "libft.h"
+#include <unistd.h>
 
-int	ft_isascii(int c)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	unsigned int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
+/*int main()
+{
+	int fd;
+	char *s = "hello world";
+	fd = open("test.txt", O_WRONLY | O_CREAT | O_RDONLY );
+	if (fd== -1)
+		return 1;
+	ft_putstr_fd(s, fd);
+}*/

@@ -6,16 +6,16 @@
 /*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:42:15 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/23 14:07:14 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/10/30 09:53:59 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char	*str, int	c)
+char	*ft_strrchr(const char *str, int c)
 {
 	char	*last_occ;
-	int	i;
+	int		i;
 
 	i = 0;
 	last_occ = 0;
@@ -28,6 +28,6 @@ char	*ft_strrchr(const char	*str, int	c)
 		i++;
 	}
 	if (c == '\0')
-		return(NULL);
+		return ((char *)&str[i]);
 	return (last_occ);
 }

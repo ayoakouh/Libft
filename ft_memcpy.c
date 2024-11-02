@@ -6,23 +6,23 @@
 /*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 19:32:40 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/24 11:02:14 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/10/30 09:09:21 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char *d;
-	unsigned char *s;
-	size_t i ;
+	unsigned char	*d;
+	unsigned char	*s;
+	size_t			i;
 
 	i = 0;
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
 	if (!d && !s)
-		return(0);
+		return (0);
 	while (i < n)
 	{
 		d[i] = s[i];

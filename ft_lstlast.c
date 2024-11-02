@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 14:51:29 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/29 09:33:05 by ayoakouh         ###   ########.fr       */
+/*   Created: 2024/11/01 12:55:20 by ayoakouh          #+#    #+#             */
+/*   Updated: 2024/11/01 14:04:19 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isascii(int c)
+t_list *ft_lstlast(t_list *lst)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	if (lst == NULL)
+		return (NULL);
+	while (lst ->next != NULL)
+	{
+		lst = lst ->next;
+	}
+	return (lst);
+}
+int main()
+{
+	t_list node0;
+	t_list node1;
+	t_list node2;
+	t_list node3;
+
+
+	node0.content = 
 }

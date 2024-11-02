@@ -6,17 +6,16 @@
 /*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 14:50:17 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/22 14:51:04 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/10/30 09:28:46 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int	c)
+int	ft_isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
-		return(0);
+		return (0);
 }
-

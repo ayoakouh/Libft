@@ -1,52 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 18:49:46 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/25 19:06:02 by ayoakouh         ###   ########.fr       */
+/*   Created: 2024/10/25 09:44:49 by ayoakouh          #+#    #+#             */
+/*   Updated: 2024/10/30 13:52:09 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-size_t	ft_strlen(const char	*str)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*ptr;
 	size_t	i;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-char	*ft_strtrim(char const	*s1, char const	*set)
-{
-	size_t	start;
-	size_t	end;
-	char *ptr;
 
-	start = 0;
-	end = ft_strlen(s1);
-	while (s1[start] == set[start])
-		start++;
-	while (s1[end] == set[end])
-		end--;
-	ptr = (char *) malloc (end - start + 1);
+	i = 0;
+	ptr = (char *)malloc(sizeof(char) * len + 1);
 	if (ptr == NULL)
 		return (NULL);
-	while (start <= end)
+	while (i < len)
 	{
-		ptr[start] = s1[start];
-		start++;
+		ptr[i] = s[start + i];
+		i++;
 	}
-	ptr[end + 1] = '\0';
+	ptr[len] = '\0';
 	return (ptr);
 }
 #include <stdio.h>
 int main()
 {
-	char str[] = "   ayoub ali     ";
-	char set[] = " ";
-	printf("%s", ft_strtrim(str,set));
+	char str[] = "welcom to 42 school";
+	int start = 7;
+	size_t len = 5;
+	printf("%s", ft_substr(str, start, len));
 }
