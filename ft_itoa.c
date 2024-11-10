@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 10:46:36 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/11/02 12:41:39 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/11/10 20:34:29 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,13 @@ char	*sizem(int i)
 	return (ptr);
 }
 
+static char	*handle_zero(char *ptr)
+{
+	ptr[0] = '0';
+	ptr[1] = '\0';
+	return (ptr);
+}
+
 char	*ft_itoa(int n)
 {
 	char		*ptr;
@@ -55,13 +62,11 @@ char	*ft_itoa(int n)
 	nb = n;
 	i = ft_len(n);
 	ptr = sizem(i);
+	if (!ptr)
+		return (NULL);
 	i -= 1;
 	if (nb == 0)
-	{
-		ptr[0] = '0';
-		ptr[1] = '\0';
-		return (ptr);
-	}
+		return (handle_zero(ptr));
 	if (nb < 0)
 	{
 		ptr[0] = '-';
@@ -69,8 +74,9 @@ char	*ft_itoa(int n)
 	}
 	while (nb > 0)
 	{
-		ptr[i--] = nb % 10 + '0';
+		ptr[i] = nb % 10 + '0';
 		nb /= 10;
+		i--;
 	}
 	return (ptr);
 }

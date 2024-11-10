@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 12:55:20 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/11/02 18:09:40 by ayoakouh         ###   ########.fr       */
+/*   Created: 2024/10/23 19:32:40 by ayoakouh          #+#    #+#             */
+/*   Updated: 2024/11/07 11:16:38 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (lst == NULL)
-		return (NULL);
-	while (lst ->next != NULL)
+	unsigned char	*d;
+	unsigned char	*s;
+	size_t			i;
+
+	i = 0;
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	if (d == s)
+		return (d);
+	while (i < n)
 	{
-		lst = lst ->next;
+		d[i] = s[i];
+		i++;
 	}
-	return (lst);
+	return (dest);
+}
+#include <libc.h>
+int main()
+{
+	char dest[] =NULL;
+	char src[] = "ayoub";
+	printf("%s", ft_strlcpy());
 }

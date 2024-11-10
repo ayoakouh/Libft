@@ -6,7 +6,7 @@
 /*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 08:14:38 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/25 19:49:41 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/11/10 18:31:44 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,9 @@ size_t	ft_strlen(const char	*s)
 	}
 	return (i);
 }
+// int main()
+// {
+
+// 	int nb = 1337;
+// 	printf("%zu\n", ft_strlen((char *)&nb));
+// }

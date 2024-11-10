@@ -6,7 +6,7 @@
 /*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 09:44:49 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/30 17:47:26 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/11/10 18:27:24 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
 	size_t	i;
+	size_t	l;
 
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	if (start >= ft_strlen(s))
-	{
-		ptr = (char *) malloc (1);
-		if (ptr == NULL)
-			return (NULL);
-		ptr[0] = '\0';
-		return (ptr);
-	}
+		l = ft_strlen(s);
+	if (start >= l)
+		return (ft_strdup(""));
+		if (len > l - start)
+			len = l - start;
 	ptr = (char *)malloc(sizeof(char) * len + 1);
 	if (ptr == NULL)
 		return (NULL);

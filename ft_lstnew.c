@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+ /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
@@ -13,10 +13,12 @@
 #include "libft.h"
 #include <stdlib.h>
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list *nw_node;
 	nw_node = (t_list *)malloc(sizeof(t_list));
+    if (nw_node == NULL)
+        return (NULL);
 	nw_node->content = content;
 	nw_node->next = NULL;
 	return (nw_node);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 17:22:42 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/30 09:12:45 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/11/10 18:23:36 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,17 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+// #include<string.h>
+// int main()
+// {
+// 	int s1= 260;
+// 	int s2= 290;
+// 	printf("%d", ft_memcmp((unsigned char *)&s1,(unsigned char *)&s2, 10)); 
+// }
+// int main()
+// {
+// 	int s1= 260;
+// 	int s2= 290;
+// 	printf("%d", ft_memcmp(NULL, NULL, 0)); 
+// }
+

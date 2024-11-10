@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 12:15:54 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/11/02 12:51:34 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/11/10 18:34:04 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
+	// if (big == NULL && len == NULL)
+	// 	return (NULL);
 	if (*little == '\0')
 	{
 		return ((char *)big);

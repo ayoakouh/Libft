@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:37:28 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/10/31 09:25:07 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:58:05 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,17 +90,17 @@ char **ft_split(char const *s, char c)
    }
     return(str);
 }
-#include <stdio.h>
-int main()
-{
-	int		i = 0;
-	char *str ="@@@ ayoub @@ aliii @@@";
-	char c = '@';
-	char **result;
-	result = ft_split(str, c);
-	while (result[i] != NULL)
-	{
-		printf("%s", result[i]);
-		i++;
-	}
-}
+// #include <stdio.h>
+// int main()
+// {
+// 	int		i = 0;
+// 	char *str ="@@@ ayoub @@ aliii @@@";
+// 	char c = '@';
+// 	char **result;
+// 	result = ft_split(str, c);
+// 	while (result[i] != NULL)
+// 	{
+// 		printf("%s", result[i]);
+// 		i++;
+// 	}
+// }
