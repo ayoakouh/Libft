@@ -6,12 +6,11 @@
 /*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 13:49:11 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/11/10 16:29:55 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/11/18 11:40:06 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {

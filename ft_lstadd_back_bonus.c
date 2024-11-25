@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayoakouh <ayoakouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 13:51:48 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/11/02 12:46:45 by ayoakouh         ###   ########.fr       */
+/*   Created: 2024/11/12 19:15:43 by ayoakouh          #+#    #+#             */
+/*   Updated: 2024/11/17 17:56:58 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	i;
+	t_list	*current;
 
-	i = 0;
-	while (src[i] != '\0')
+	if (!new)
+		return ;
+	if (*lst == NULL)
 	{
-		dest[i] = src[i];
-		i++;
+		*lst = new;
+		return ;
 	}
-	dest[i] = '\0';
-	return (dest);
+	current = *lst;
+	while (current ->next != NULL)
+	{
+		current = current->next;
+	}
+	current ->next = new;
 }

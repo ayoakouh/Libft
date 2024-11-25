@@ -6,14 +6,13 @@
 /*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 10:46:36 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/11/10 20:34:29 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/11/17 17:42:20 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-int	ft_len(int long c)
+static int	ft_len(int long c)
 {
 	int	count;
 
@@ -35,7 +34,7 @@ int	ft_len(int long c)
 	return (count);
 }
 
-char	*sizem(int i)
+static char	*sizem(int i)
 {
 	char	*ptr;
 

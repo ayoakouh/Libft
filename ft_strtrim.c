@@ -6,12 +6,11 @@
 /*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:13:36 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/11/10 16:06:10 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/11/17 17:14:07 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	is_set(char c, char const *set)
 {

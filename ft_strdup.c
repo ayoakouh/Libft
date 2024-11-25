@@ -6,12 +6,11 @@
 /*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 09:44:38 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/11/10 18:35:09 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/11/21 12:37:52 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {
@@ -30,3 +29,4 @@ char	*ft_strdup(const char *s)
 	ptr[i] = '\0';
 	return (ptr);
 }
+ 

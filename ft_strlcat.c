@@ -6,7 +6,7 @@
 /*   By: ayoakouh <ayoakouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:15:39 by ayoakouh          #+#    #+#             */
-/*   Updated: 2024/11/10 18:32:41 by ayoakouh         ###   ########.fr       */
+/*   Updated: 2024/11/17 17:30:22 by ayoakouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char	*dest, const char	*src, size_t	size)
 	size_t	j;
 
 	lensrc = ft_strlen(src);
+	if (dest == NULL && size == 0)
+		return (lensrc);
 	lendest = ft_strlen(dest);
 	if (size == 0 || size <= lendest)
 		return (lensrc + size);
